@@ -77,7 +77,7 @@ const Hero = () => {
     });
   });
 
-  const getVideoSrc = (index:number) => `videos/hero-${index}.mp4`;
+  const getVideoSrc = (index: number) => `videos/hero-${index}.mp4`;
 
   return (
     <main className="relative h-dvh w-screen">
@@ -105,7 +105,10 @@ const Hero = () => {
           className="absolute-center z-20 invisible size-64 object-cover object-center"
           onLoadedData={handleVideoLoad}
         />
-        <video className="absolute left-0 top-0 size-full object-cover object-center" loop autoPlay muted src={getVideoSrc((currentIndex === totalVideos - 1 ? 1 : currentIndex))} onLoadedData={handleVideoLoad} />
+        <video className="absolute left-0 top-0 size-full object-cover object-center"
+          loop
+          autoPlay
+          muted src={getVideoSrc((currentIndex === totalVideos - 1 ? 1 : currentIndex))} onLoadedData={handleVideoLoad} />
         <h1 className="special-font hero-heading absolute bottom-5 right-5 text-blue-75 z-40">
           G<b>a</b>ming
         </h1>
